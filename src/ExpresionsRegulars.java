@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Main {
+public class ExpresionsRegulars {
     public static void main(String[] args) throws FileNotFoundException {
         FileReader fr = new FileReader("src/file.txt");
         Scanner sc = new Scanner(fr);
@@ -14,6 +14,8 @@ public class Main {
         while (sc.hasNext()){
             casas.add(sc.nextLine());
         }
+
+        System.out.println("\nEXPRESIONS REGULARS");
 
         Pattern pNoel = Pattern.compile("\\*<]:-DOo");
         Pattern pRens = Pattern.compile(">:o\\)");
@@ -34,6 +36,5 @@ public class Main {
 
             System.out.println("Casa " + (x+1) + " = Pare Noel ("+ nNoels +")" + " - Rens ("+ nRens +")" + " - Follets ("+ nFollets +")");
         }
-
     }
 }
